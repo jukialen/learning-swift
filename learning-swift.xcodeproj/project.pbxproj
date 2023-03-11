@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		883E44C229B7A09A00C49165 /* images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883E44C129B7A09A00C49165 /* images.swift */; };
+		885571BF29BA1F33000CBF91 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885571BE29BA1F33000CBF91 /* MapView.swift */; };
+		885896F429BB4FE700CB845E /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885896F329BB4FE700CB845E /* ImageView.swift */; };
+		885896F629BB50E700CB845E /* FlexableImagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885896F529BB50E700CB845E /* FlexableImagesView.swift */; };
+		885896F829BB5A6600CB845E /* AlaProfileWithMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885896F729BB5A6600CB845E /* AlaProfileWithMap.swift */; };
 		8863DD6329B643110063FA1D /* learning_swiftApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8863DD6229B643110063FA1D /* learning_swiftApp.swift */; };
 		8863DD6529B643110063FA1D /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8863DD6429B643110063FA1D /* Persistence.swift */; };
 		8863DD6829B643110063FA1D /* learning_swift.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8863DD6629B643110063FA1D /* learning_swift.xcdatamodeld */; };
@@ -36,6 +41,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		883E44C129B7A09A00C49165 /* images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = images.swift; sourceTree = "<group>"; };
+		885571BE29BA1F33000CBF91 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		885896F329BB4FE700CB845E /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
+		885896F529BB50E700CB845E /* FlexableImagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlexableImagesView.swift; sourceTree = "<group>"; };
+		885896F729BB5A6600CB845E /* AlaProfileWithMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlaProfileWithMap.swift; sourceTree = "<group>"; };
 		8863DD5F29B643110063FA1D /* learning-swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "learning-swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8863DD6229B643110063FA1D /* learning_swiftApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = learning_swiftApp.swift; sourceTree = "<group>"; };
 		8863DD6429B643110063FA1D /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -103,6 +113,11 @@
 				8863DD6429B643110063FA1D /* Persistence.swift */,
 				8863DD6929B643110063FA1D /* ContentView.swift */,
 				8863DD6B29B643120063FA1D /* Assets.xcassets */,
+				883E44C129B7A09A00C49165 /* images.swift */,
+				885896F529BB50E700CB845E /* FlexableImagesView.swift */,
+				885896F329BB4FE700CB845E /* ImageView.swift */,
+				885571BE29BA1F33000CBF91 /* MapView.swift */,
+				885896F729BB5A6600CB845E /* AlaProfileWithMap.swift */,
 				8863DD6D29B643120063FA1D /* learning_swift.entitlements */,
 				8863DD6629B643110063FA1D /* learning_swift.xcdatamodeld */,
 				8863DD6E29B643120063FA1D /* Preview Content */,
@@ -266,9 +281,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				8863DD6329B643110063FA1D /* learning_swiftApp.swift in Sources */,
+				885896F829BB5A6600CB845E /* AlaProfileWithMap.swift in Sources */,
+				885571BF29BA1F33000CBF91 /* MapView.swift in Sources */,
 				8863DD6529B643110063FA1D /* Persistence.swift in Sources */,
 				8863DD6A29B643110063FA1D /* ContentView.swift in Sources */,
+				883E44C229B7A09A00C49165 /* images.swift in Sources */,
+				885896F429BB4FE700CB845E /* ImageView.swift in Sources */,
 				8863DD6829B643110063FA1D /* learning_swift.xcdatamodeld in Sources */,
+				885896F629BB50E700CB845E /* FlexableImagesView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
