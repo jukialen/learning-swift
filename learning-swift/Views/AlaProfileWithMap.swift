@@ -14,6 +14,8 @@ struct AlaProfileWithMap: View {
     span: MKCoordinateSpan(latitudeDelta: 0.2, longitudeDelta: 0.2)
     )
   
+  var landmark: Landmark;
+  
   var body: some View {
     VStack {
       Map(coordinateRegion: $region, showsUserLocation: true)
@@ -21,7 +23,7 @@ struct AlaProfileWithMap: View {
         .frame(height: 300)
         .padding(-40)
       
-      ImageView()
+      ImageView(image: landmark.image)
         .padding(.top, -150)
         .frame(height: 120)
 
@@ -61,6 +63,6 @@ struct AlaProfileWithMap: View {
 
 struct AlaProfileWithMap_Previews: PreviewProvider {
   static var previews: some View {
-    AlaProfileWithMap()
+    AlaProfileWithMap(landmark: landmarks[0])
   }
 }

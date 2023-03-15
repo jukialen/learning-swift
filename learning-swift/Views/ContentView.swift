@@ -15,7 +15,7 @@ struct ContentView: View {
     sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: true)],
     animation: .default)
   private var items: FetchedResults<Item>
-
+  
   var body: some View {
     NavigationView {
       List {
@@ -29,7 +29,6 @@ struct ContentView: View {
                       .accessibilityAddTraits([.isHeader])
                   }
                     .padding(.leading, 30.0)
-                    .frame(width: 200)
                 }
             }
                   
@@ -40,27 +39,9 @@ struct ContentView: View {
           .onDelete(perform: deleteItems)
         
         NavigationLink {
-          MapView()
+          LandmarkList()
         } label: {
-            Text("MapView")
-        }
-        
-        NavigationLink {
-          images()
-        } label: {
-            Text("images")
-        }
-        
-        NavigationLink {
-          FlexableImagesView()
-        } label: {
-            Text("flexable images")
-        }
-        
-        NavigationLink {
-          AlaProfileWithMap()
-        } label: {
-            Text("a'la profile with map")
+          Text("Landmark's List")
         }
       }
       .toolbar {
@@ -129,6 +110,12 @@ private let itemFormatter: DateFormatter = {
 
 struct ContentView_Previews: PreviewProvider {
   static var previews: some View {
-    ContentView().previewLayout(.device).previewDevice("My mac)").environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+    ForEach(["iPhone SE (3rd generation)", "iPhone 14", "My mac", "iPad Pro (11-inch) (4th generation)"], id: \.self) { deviceName in
+      ContentView()
+        .previewLayout(.device)
+        .previewDevice(PreviewDevice(rawValue: deviceName))
+        .previewDisplayName(deviceName)
+        .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+      }
   }
 }

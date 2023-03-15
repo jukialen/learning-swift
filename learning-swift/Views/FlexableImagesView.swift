@@ -1,15 +1,16 @@
 //
-//  images.swift
+//  FlexableImagesView.swift
 //  learning-swift
 //
-//  Created by Piotr prom on 07/03/2023.
+//  Created by Piotr prom on 10/03/2023.
 //
 
 import SwiftUI
 
-struct images: View {
+struct FlexableImagesView: View {
+  var landmark: Landmark;
+  
   var body: some View {
-    
     VStack  {
       ScrollView {
         Text("My images")
@@ -25,7 +26,7 @@ struct images: View {
 
         ForEach(0 ..< 5) { item in
           HStack {
-            ImageView()
+            ImageView(image: landmark.image)
           }
         }
       }
@@ -45,8 +46,8 @@ struct images: View {
   }
 }
 
-struct images_Previews: PreviewProvider {
-    static var previews: some View {
-        images()
-    }
+struct FlexableImagesView_Previews: PreviewProvider {
+  static var previews: some View {
+    FlexableImagesView(landmark: landmarks[0])
+  }
 }

@@ -8,26 +8,28 @@
 import SwiftUI
 
 struct ImageView: View {
+  var image: Image
+  
   var body: some View {
-    VStack {
-      Image("turtlerock")
-        .clipShape(Circle()).cornerRadius(0.8)
+//    VStack {
+      image
+        .clipShape(Circle())
+        .cornerRadius(0.8)
         .overlay {
           Circle().stroke(.white, lineWidth: 4)
         }
         .shadow(radius: 5)
         .padding(.horizontal, 40)
         .backgroundStyle(Color.clear)
-      Spacer(minLength: 30)
-      
+//      Spacer(minLength: 30)
     }
-    .padding(20)
-    .frame(alignment: .center)
-  }
+//    .padding(20)
+//    .frame(alignment: .center)
+//  }
 }
 
 struct ImageView_Previews: PreviewProvider {
     static var previews: some View {
-        ImageView()
+        ImageView(image: Image("turtlerock"))
     }
 }
