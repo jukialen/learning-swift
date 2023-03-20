@@ -43,6 +43,12 @@ struct ContentView: View {
         } label: {
           Text("Landmark's List")
         }
+        
+        NavigationLink {
+          Badge()
+        } label: {
+          Text("Badge")
+        }
       }
       .toolbar {
         ToolbarItem(placement: .principal) {
@@ -116,6 +122,7 @@ struct ContentView_Previews: PreviewProvider {
         .previewDevice(PreviewDevice(rawValue: deviceName))
         .previewDisplayName(deviceName)
         .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+        .environmentObject(ModelData())
       }
   }
 }

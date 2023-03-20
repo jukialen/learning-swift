@@ -48,6 +48,6 @@ struct FlexableImagesView: View {
 
 struct FlexableImagesView_Previews: PreviewProvider {
   static var previews: some View {
-    FlexableImagesView(landmark: landmarks[0])
+    FlexableImagesView(landmark: ModelData().landmarks[0])
   }
 }

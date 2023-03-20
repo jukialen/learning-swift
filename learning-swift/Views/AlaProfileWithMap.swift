@@ -63,6 +63,6 @@ struct AlaProfileWithMap: View {
 
 struct AlaProfileWithMap_Previews: PreviewProvider {
   static var previews: some View {
-    AlaProfileWithMap(landmark: landmarks[0])
+    AlaProfileWithMap(landmark: ModelData().landmarks[0])
   }
 }

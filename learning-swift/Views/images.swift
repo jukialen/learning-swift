@@ -48,6 +48,6 @@ struct images: View {
 
 struct images_Previews: PreviewProvider {
     static var previews: some View {
-        images(landmark: landmarks[0])
+      images(landmark: ModelData().landmarks[0])
     }
 }

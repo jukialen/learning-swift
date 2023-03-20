@@ -11,7 +11,6 @@ struct ImageView: View {
   var image: Image
   
   var body: some View {
-//    VStack {
       image
         .clipShape(Circle())
         .cornerRadius(0.8)
@@ -21,11 +20,7 @@ struct ImageView: View {
         .shadow(radius: 5)
         .padding(.horizontal, 40)
         .backgroundStyle(Color.clear)
-//      Spacer(minLength: 30)
     }
-//    .padding(20)
-//    .frame(alignment: .center)
-//  }
 }
 
 struct ImageView_Previews: PreviewProvider {
