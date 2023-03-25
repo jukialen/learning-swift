@@ -10,7 +10,9 @@ import Combine
 
 final class ModelData: ObservableObject {
   @Published var landmarks: [Landmark] = load("learning_swift.json")
+  var hikes: [Hike] = load("hikeData.json")
 }
+
 
 func load<T: Decodable>(_ filename: String) -> T {
   let data: Data

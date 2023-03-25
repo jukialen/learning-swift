@@ -49,6 +49,12 @@ struct ContentView: View {
         } label: {
           Text("Badge")
         }
+        
+        NavigationLink {
+          HikeView(hike: ModelData().hikes[0])
+        } label: {
+          Text("Hikes graph")
+        }
       }
       .toolbar {
         ToolbarItem(placement: .principal) {

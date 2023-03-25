@@ -31,6 +31,8 @@ struct LandmarkList: View {
       ForEach(filteredLandmarks) { landmark in
         NavigationLink {
           LandmarkDetail(landmark: landmark)
+            .scaleEffect(showFavoritesOnly ? 1.2 : 1)
+            .animation(.easeInOut, value: showFavoritesOnly)
         } label: {
           LandmarkRow(landmark: landmark)
         }

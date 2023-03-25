@@ -31,6 +31,8 @@ struct LandmarkDetail: View {
           Text(landmark.name)
             .font(.title)
           FavoriteButton(isSet: $modelData.landmarks[landmarkIndex].isFavorite)
+            .scaleEffect(modelData.landmarks[landmarkIndex].isFavorite ? 1.2 : 1)
+            .animation(.easeInOut, value: modelData.landmarks[landmarkIndex].isFavorite)
         }
         
         HStack {
