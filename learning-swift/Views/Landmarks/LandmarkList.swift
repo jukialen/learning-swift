@@ -22,23 +22,25 @@ struct LandmarkList: View {
   }
 
   var body: some View {
-    List {
-      Toggle(isOn: $showFavoritesOnly) {
-        Text("Favorites only")
-      }
-        .padding(.bottom, 0)
-      
-      ForEach(filteredLandmarks) { landmark in
-        NavigationLink {
-          LandmarkDetail(landmark: landmark)
-            .scaleEffect(showFavoritesOnly ? 1.2 : 1)
-            .animation(.easeInOut, value: showFavoritesOnly)
-        } label: {
-          LandmarkRow(landmark: landmark)
+    NavigationView {
+      List {
+        Toggle(isOn: $showFavoritesOnly) {
+          Text("Favorites only")
+        }
+          .padding(.bottom, 0)
+        
+        ForEach(filteredLandmarks) { landmark in
+          NavigationLink {
+            LandmarkDetail(landmark: landmark)
+              .scaleEffect(showFavoritesOnly ? 1.2 : 1)
+              .animation(.easeInOut, value: showFavoritesOnly)
+          } label: {
+            LandmarkRow(landmark: landmark)
+          }
         }
       }
-    }
       .navigationTitle("Landmarks")
+    }
   }
 }
 
